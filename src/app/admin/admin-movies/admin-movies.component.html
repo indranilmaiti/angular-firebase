@@ -1,0 +1,30 @@
+<div class="row" style="margin-top:10px; ">
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align: right">Movie Name</div>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <input class="form-control" type="text" [(ngModel)]="movieName" />
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"  style="text-align: right">Movie Language</div>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <input class="form-control" type="text"  [(ngModel)]="movielanguage"  />
+  </div>
+</div>
+<div class="row"  style="margin-top:10px; ">
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"  style="text-align: right" >You Tube Trailer</div>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <input class="form-control" type="text"  [(ngModel)]="youtubeTrailer" />
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"  style="text-align: right">Rating</div>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <input class="form-control" type="text"  [(ngModel)]="rating" /></div>
+</div>
+<div class="row"  style="margin-top:10px; ">
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"  style="text-align: right">Description</div>
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+    <textarea class="form-control"  [(ngModel)]="description"></textarea>
+  </div>
+</div>
+<div class="row"  style="margin-top:10px; ">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: right">
+    <button class="btn btn-primary" (click)="createMovies()">Sumbit</button>
+  </div>
+</div>
