@@ -15,6 +15,9 @@ export class AppComponent {
 
   }
 
+
+
+
   ngOnInit() {
     // this.db.list("/movies").valueChanges().subscribe((movies) => {
     //   console.log(movies);

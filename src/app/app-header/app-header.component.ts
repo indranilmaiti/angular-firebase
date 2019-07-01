@@ -15,17 +15,22 @@ export class AppHeaderComponent implements OnInit {
     { id: 3, name: "Bengali" }
   ]
 
+  selectedTab = 'movies';
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  homeClicked() {
-    this.router.navigate(['/home']);
-  }
+
 
   adminClicked() {
     this.router.navigate(['/admin']);
+    this.selectedTab = 'admin';
+  }
+
+  gotoMovies() {
+    this.router.navigate(['/movies']);
+    this.selectedTab = 'movies';
   }
 
 }

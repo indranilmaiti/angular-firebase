@@ -11,33 +11,30 @@ import { environment } from '../environments/environment.prod';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 
-import { TestComponent } from './test/test.component';
-import { Test2Component } from './test2/test2.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AdminComponent } from './admin/admin.component';
-import { AdminLanguageComponent } from './admin/admin-language/admin-language.component';
 import { AdminMoviesComponent } from './admin/admin-movies/admin-movies.component';
-import { AdminNewsComponent } from './admin/admin-news/admin-news.component';
-import { HomeComponent } from './home/home.component'
+import { MoviesComponent } from './movies/movies.component';
+
+import { OwlModule } from 'ngx-owl-carousel';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    Test2Component,
     AppHeaderComponent,
     AdminComponent,
-    AdminLanguageComponent,
     AdminMoviesComponent,
-    AdminNewsComponent,
-    HomeComponent
+    MoviesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent]

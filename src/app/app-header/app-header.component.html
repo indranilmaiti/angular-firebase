@@ -7,15 +7,8 @@
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="javascript:void(0)" (click)="homeClicked()"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>Home</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><span style="padding-right:5px;" class="glyphicon glyphicon-film"></span>Movies
-          <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li *ngFor="let item of languagelist"><a href="javascript:void(0)">{{item.name}}</a></li>
-        </ul>
-      </li>
-      <li><a href="javascript:void(0)" (click)="adminClicked()"><span style="padding-right:5px;" class="glyphicon glyphicon-user"></span>Admin</a></li>
+      <li [ngClass]="{'active':selectedTab=='movies'}" ><a href="javascript:void(0)" (click)="gotoMovies()"><span style="padding-right:5px;" class="glyphicon glyphicon-film"></span>Movies</a></li>
+      <li  [ngClass]="{'active':selectedTab=='admin'}"><a href="javascript:void(0)" (click)="adminClicked()"><span style="padding-right:5px;" class="glyphicon glyphicon-user"></span>Admin</a></li>
     </ul>
   </div>
 </nav>
